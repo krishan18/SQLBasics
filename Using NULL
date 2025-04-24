@@ -7,3 +7,16 @@ SELECT teacher.name, dept.name
 
 
 Select teacher.name,dept.name from teacher Left join dept on teacher.dept=dept.id
+
+
+Select teacher.name,dept.name from teacher Right join dept on teacher.dept=dept.id
+
+Select name, COALESCE(mobile,'07986 444 2266') from teacher 
+
+Select COALESCE(teacher.name,'NONE'),COALESCE(dept.name,'None') from teacher LEFT JOIN dept on teacher.dept=dept.id
+
+
+Select teacher.name,
+CASE WHEN dept='1' THEN 'Sci'
+WHEN dept='2' THEN 'Sci'
+ELSE 'Art' END from teacher LEFT JOIN dept on teacher.dept=dept.id
