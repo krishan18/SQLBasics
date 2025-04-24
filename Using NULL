@@ -1,0 +1,9 @@
+Select name from teacher where dept is NULL
+
+
+SELECT teacher.name, dept.name
+ FROM teacher INNER JOIN dept
+           ON (teacher.dept=dept.id)
+
+
+Select teacher.name,dept.name from teacher Left join dept on teacher.dept=dept.id
